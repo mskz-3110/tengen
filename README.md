@@ -19,7 +19,7 @@ Use templates to simplify string replacement
 
 |Version|Summary|
 |:--|:--|
-|0.1.0|Release tengen|
+|0.1.2|Release tengen|
 
 ## Installation
 ### tengen
@@ -36,6 +36,12 @@ Rendering using templates
 ```
 
 #### 2. Rendering templates by CLI execution
+
+```
+render # <template name> <args>
+  [With value]
+    -o|--output  # Output file path
+```
 `tengen render done TENGEN`
 ```
 TENGEN is done.

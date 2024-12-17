@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tengen"
-version = "0.1.0"
+version = "0.1.2"
 authors = [{name = "mskz-3110", email = "mskz.saito@gmail.com"}]
 description = "Generate string using template"
 readme = "README.md"

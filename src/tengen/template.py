@@ -2,8 +2,6 @@ import copy
 from pyemon.list import *
 
 class Template:
-  __EmptyTemplate = None
-
   __Templates = {}
 
   def __init__(self, format = "", name = ""):
@@ -31,9 +29,7 @@ class Template:
   def get(cls, name):
     if name in Template.__Templates:
       return Template.__Templates[name]
-    if Template.__EmptyTemplate is None:
-      Template.__EmptyTemplate = Template()
-    return Template.__EmptyTemplate
+    return None
 
   @classmethod
   def templates(cls):
@@ -42,4 +38,7 @@ class Template:
   @classmethod
   def render(cls, args):
     newArgs = copy.deepcopy(args)
-    return Template.get(List.shift(newArgs)).to_string(newArgs)
+    template = Template.get(List.shift(newArgs))
+    if template is None:
+      return None
+    return template.to_string(newArgs)
