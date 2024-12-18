@@ -19,7 +19,7 @@ Use templates to simplify string replacement
 
 |Version|Summary|
 |:--|:--|
-|0.1.2|Release tengen|
+|0.1.4|Release tengen|
 
 ## Installation
 ### tengen
