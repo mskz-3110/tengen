@@ -34,7 +34,7 @@ class RenderTask(Task):
         print(Template.render(format, self.OptionParser.Argv), end = "")
       else:
         Template.write(outputFilePath, format, self.OptionParser.Argv)
-        print(FileStatus(outputFilePath, "done"))
+        print(Status(outputFilePath, "done"))
 Task.set(RenderTask("<template name> <args>"))
 
 Task.parse_if_main(__name__, Task.get("help"))
